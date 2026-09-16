@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ReviewSieve Privacy Policy</title>
+  <style>
+    :root { color-scheme: light; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    body { margin: 0; background: #f8fafc; color: #111827; }
+    main { max-width: 820px; margin: 48px auto; padding: 0 24px 72px; }
+    article { background: #fff; border: 1px solid #e5e7eb; border-radius: 24px; padding: 36px; box-shadow: 0 18px 60px rgba(17,24,39,.08); }
+    .eyebrow { font-size: 12px; font-weight: 800; letter-spacing: .12em; color: #6b7280; }
+    h1 { font-size: 38px; margin: 8px 0 10px; }
+    h2 { margin-top: 30px; font-size: 21px; }
+    p, li { line-height: 1.65; color: #374151; }
+    .notice { background: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 14px; padding: 16px; }
+    a { color: #6d28d9; }
+  </style>
+</head>
+<body>
+<main>
+<article>
+  <div class="eyebrow">REVIEWSIEVE</div>
+  <h1>Privacy Policy</h1>
+  <p><strong>Effective date:</strong> September 16, 2026</p>
+
+  <p>ReviewSieve is a Chrome extension that reduces review noise on GitHub pull requests. This policy explains the data ReviewSieve handles, why it is handled, where it is stored, and which service providers receive it.</p>
+
+  <h2>1. GitHub pull-request content</h2>
+  <p>When you view a GitHub pull request, ReviewSieve reads the rendered review comments needed to classify, filter, deduplicate, and compare review findings.</p>
+  <p><strong>Raw GitHub review text is processed locally in your browser.</strong> ReviewSieve does not send raw GitHub review text to ReviewSieve servers, Supabase, Stripe, Resend, or an AI model.</p>
+  <p>For cross-visit Review Delta, ReviewSieve stores privacy-preserving hashes/signatures and limited review metadata locally in Chrome storage instead of storing raw review text. It also stores a hashed identifier for the pull request so the same PR can be recognized on a later visit.</p>
+
+  <h2>2. Local usage metrics</h2>
+  <p>ReviewSieve may store local-only product metrics such as comments processed, comments avoided, duplicates collapsed, and PRs cleaned. These values and their deduplication hashes remain in Chrome local storage and are not transmitted for analytics or advertising.</p>
+
+  <h2>3. Account and authentication data</h2>
+  <p>If you sign in, ReviewSieve uses your email address for passwordless authentication through Supabase Auth. One-time sign-in emails are delivered through Resend.</p>
+  <p>Authentication access credentials are kept in the extension's session cache. The refresh credential used to restore your session is stored in extension-origin IndexedDB. Raw authentication tokens are not sent to GitHub content scripts.</p>
+
+  <h2>4. Subscription and billing data</h2>
+  <p>If you purchase ReviewSieve Pro, ReviewSieve uses Supabase Edge Functions to start Stripe Checkout and Stripe Customer Portal sessions. Stripe processes payment-card details on Stripe-hosted pages. ReviewSieve does not receive or store card numbers or CVC values.</p>
+  <p>ReviewSieve's backend stores subscription-related identifiers and status needed to determine whether your account has Pro access, such as the Stripe customer identifier, subscription identifier, price identifier, subscription status, and renewal/cancellation timestamps.</p>
+
+  <h2>5. Service providers</h2>
+  <ul>
+    <li><strong>Supabase</strong> — authentication, entitlement records, and server-side billing functions.</li>
+    <li><strong>Resend</strong> — delivery of passwordless one-time sign-in emails through SMTP.</li>
+    <li><strong>Stripe</strong> — paid subscription checkout, customer portal, billing, invoices, and subscription events.</li>
+    <li><strong>GitHub</strong> — the website on which ReviewSieve's local review-cleaning functionality operates.</li>
+  </ul>
+
+  <h2>6. Advertising, sale, and profiling</h2>
+  <p>ReviewSieve does not sell user data. ReviewSieve does not use GitHub review content, account data, or browsing information for personalized advertising, retargeting, credit scoring, or data-broker purposes.</p>
+
+  <h2>7. Data retention and deletion</h2>
+  <p>Local ReviewSieve data is stored in the Chrome profile in which the extension is installed. Uninstalling the extension removes extension-local browser storage according to Chrome's extension storage behavior.</p>
+  <p>Signing out removes the locally stored authentication session/refresh credential. Subscription records may remain on ReviewSieve's backend for billing, fraud prevention, accounting, dispute handling, and legal compliance where required.</p>
+  <p>For an account-data deletion request, use the publisher support contact shown on the ReviewSieve Chrome Web Store listing.</p>
+
+  <h2>8. Security</h2>
+  <p>ReviewSieve limits extension permissions to the functionality it needs, uses HTTPS for remote service communication, does not execute remotely hosted JavaScript, and keeps privileged Stripe, Supabase, and Resend secrets on server-side systems rather than in the extension package.</p>
+
+  <h2>9. Chrome Web Store Limited Use</h2>
+  <div class="notice">ReviewSieve's use of information received through Chrome extension permissions will adhere to the Chrome Web Store User Data Policy, including the Limited Use requirements. Data is used only to provide or improve ReviewSieve's disclosed single purpose and necessary operational/security functions.</div>
+
+  <h2>10. Changes</h2>
+  <p>If ReviewSieve changes how it handles user data, this policy and the Chrome Web Store privacy disclosures will be updated before or alongside the relevant product change.</p>
+
+  <h2>11. Contact</h2>
+  <p>For privacy questions, use the publisher support contact listed on the ReviewSieve Chrome Web Store page.</p>
+</article>
+</main>
+</body>
+</html>
